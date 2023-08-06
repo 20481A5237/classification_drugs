@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Drug Classification</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body style="background-color:#02D8E9" >
+<h1><center><b><i>WELCOME TO DRUG CLASSIFICATION</i></b></center></h1>
+
+ <div class="login">
+     <h2>The main purpose of the Drug Classification system is to predict the suitable drug type of patients based on their
+characteristics.Drug names are confidential.So, it is replaced as DrugX, DrugY, DrugA, DrugB and DrugC.
+These drugs are used as a medication for the patients based on their age, sex(Male,Female), BP level(Low,Normal,High), cholesterol level(Normal,High) and sodium to
+potassium ratio on blood.</h2>
+
+     <!-- Main Input For Receiving Query to our ML-->
+    <form align="center" action="{{ url_for('predict')}}"method="post">
+        <b>AGE</b><br>
+    	<input type="text" name="Age" placeholder="Age" required="required" /><br><br>
+        <b>SEX</b><br>
+        <input type="text" name="Sex" placeholder="Sex" required="required" /><br><br>
+        <b>BP</b><br>
+		<input type="text" name="BP" placeholder="BP" required="required" /><br><br>
+        <b>CHOLESTEROL</b><br>
+		<input type="text" name="Cholesterol" placeholder="Cholesterol" required="required" /><br><br>
+        <b>Na_TO_K</b><br>
+        <input type="text" name="Na_to_K" placeholder="Na_to_K" required="required" /><br><br>
+<!--        <b>Age</b><br>
+<input type="text" name="Age" placeholder="Age" required="required" /><br><br>
+<b>Sex</b><br><input type="radio" name="Sex" placeholder="Sex" required="required" />Male<br>
+        <input type="radio" name="Sex" placeholder="Sex" required="required" />Female
+<br><br>
+<b>BP</b><br>
+        <input type="radio" name="BP" placeholder="BP" required="required" />Low<br>
+        <input type="radio" name="BP" placeholder="BP" required="required" />Normal<br>
+        <input type="radio" name="BP" placeholder="BP" required="required" />High
+<br><br>
+<b>Cholesterol</b><br>
+        <input type="radio" name="Cholesterol" placeholder="Cholesterol" required="required" />Normal<br>
+        <input type="radio" name="Cholesterol" placeholder="Cholesterol" required="required" />High
+<br><br>
+<b>Na_to_K</b><br>
+<br><br>-->
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   <br>
+ </div>
+</body>
+</html>
+
+
+
+
