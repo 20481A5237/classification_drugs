@@ -10,8 +10,9 @@ model = pickle.load(open("model.pkl", "rb"))
 def Home():
     return render_template("index.html")
 
-@flask_app.route("/predict", methods = ["POST"])
+@flask_app.route("/predict", methods = ["GET","POST"])
 def predict():
+    render_template("predict.html")
     age = request.form['Age']
     print(age)
     sex = request.form['Sex']

@@ -1,9 +1,25 @@
 <html>
 <head>
+    <style>
+        body{
+            text-align: center;
+            background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.56ivERqD9RSjj8IZHVnUFwHaE8%26pid%3DApi&f=1&ipt=b9348f4b600f387c1bdfb74852019a39ec556b199a97921c07ebda3886639763&ipo=images");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        p{
+            font-style: italic;
+        }
+        .result{
+            font-style:normal;
+            color: blue;
+        }
+    </style>
 <body style="background-color:#02D8E9">
 <div>
-<h1 align=center><i><b>DRUG  CLASSIFICATION</b></i></h1>
-    <pre align=center style="font-size:23px;">Based on the given input, the suitable drug for your body condition is <b><u><i>{{ prediction_text }}</u><i/></b></pre></div>
+<h1><i>DRUG  CLASSIFICATION</i></h1>
+    <p style="font-size:23px;">Based on the given input, the suitable drug for your body condition is <span class="result"><u><b>{{ prediction_text }}</u></b></span></p>
+</div>
 </body>
 </head>
 </html>
